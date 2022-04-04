@@ -11,6 +11,7 @@ public class CustomFilter implements GlobalFilter {
 
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+		System.out.println("From custom filter...");
 		return chain.filter(exchange);
 	}
 	
